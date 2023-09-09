@@ -1,0 +1,71 @@
+/* .selectionForm{
+    height: 10vh;
+    background-color: rgb(250, 249, 249);
+    border-radius:10px ;
+    width: 44vw;
+    margin-top: 5vh;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    .selectionLabel{
+        color: #92a1ad;
+        font-size: small;
+        margin-right: 30px;
+    }
+}
+
+.selectionLabel2{
+    color: #92a1ad;
+    font-size:medium;
+}
+.selectionRadio{
+    margin-right: 30px;
+    margin-left: 10px;
+} */
+
+.selectionForm {
+    height: 10vh;
+    background-color: rgb(250, 249, 249);
+    border-radius: 10px;
+    width: 44vw;
+    margin-top: 5vh;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+}
+
+.selectionLabel {
+    color: #92a1ad;
+    font-size: small;
+    margin-right: 30px;
+}
+
+.selectionLabel2 {
+    color: #92a1ad;
+    font-size: medium;
+}
+
+.selectionRadio {
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+/* Responsive Styles for Screen and Tablet */
+
+@media screen and (max-width: 768px) {
+    .selectionForm {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80vw;
+    }
+
+    .selectionLabel {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .selectionRadio {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,20 @@
+<div class="navbar">
+    <div class="opt1">
+        <div class="deleteBtn" (click)="handelRemove()">
+            <p class="deleteWord">خذف المورد</p>
+            <mat-icon class="deleteIcon">delete</mat-icon>
+        </div>
+        <div class="saveBtn">
+            <p class="saveWord"> حفظ التغييرات</p>
+        </div>
+        <div dir="rtl">
+            <mat-slide-toggle [checked]="isSlideChecked" color="primary" (change)="toggleChanges($event)">
+                <span class="toggleLabel">{{ slideName }}</span>
+            </mat-slide-toggle>
+        </div>
+    </div>
+    <div class="opt2">
+        <h5>اضافة موارد جديدة</h5>
+        <mat-icon class="rightArrow">arrow_right_alt</mat-icon>
+    </div>
+</div>

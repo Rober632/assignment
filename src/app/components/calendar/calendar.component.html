@@ -1,0 +1,95 @@
+<!-- <div class="calendar">
+    <p class="calendarTitle">حدد مواعيد العمل للمورد</p>
+    <p class="calendarTitle2">تكوين إعدادات الأسبوع الخاصة بك هنا. ما عليك سوي تحريك اشرطة التمرير و إضافة / إزالة أوقات الراحة لإعدادات ساعات العمل.</p>
+    <form #userForm="ngForm" (change)="saveUserData(userForm)">
+        <div class="weekCalendar">
+            <div class="day" *ngFor="let days of sched">
+                <mat-slide-toggle [checked]="days.state" color="primary" (change)="toggleChanges(days.day)">
+                    <span class="toggleLabel">{{days.day}}</span>
+                  </mat-slide-toggle>
+                <div *ngIf="days.state" class="timeContainer">
+                    <div class="timeCounter " *ngFor="let x of days.time">
+                        <div class="time-picker">
+                            <div class="time">
+                                <label for="time">وقت البدء</label>
+                                <select id="time"   name="startTime" [(ngModel)]="userData.startTime">
+                                    <option *ngFor="let time of times" [value]="time">{{ time }}</option>
+                                </select>
+                            </div>
+                            <span class="dashes"> - - </span>
+                            <div class="time">
+                                <label for="time">وقت الانتهاء</label>
+                                <select id="time"  name="endTime" [(ngModel)]="userData.endTime">
+                                <option *ngFor="let time of times" [value]="time">{{ time }}</option>
+                                </select>
+                            </div>
+                            <div class="plus" *ngIf="x === 1" (click)="handelPlus(days.day)"><span>+ </span> </div>
+                            <div class="plus" *ngIf="x === 2" (click)="handelMinus(days.day)"><span> - </span> </div>
+                            <div class="copy"><mat-icon>content_copy</mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+ -->
+
+
+ <div class="calendar">
+    <p class="calendarTitle">حدد مواعيد العمل للمورد</p>
+    <p class="calendarTitle2">تكوين إعدادات الأسبوع الخاصة بك هنا. ما عليك سوي تحريك اشرطة التمرير و إضافة / إزالة أوقات الراحة لإعدادات ساعات العمل.</p>
+    <form #userForm="ngForm" (change)="saveUserData(userForm)">
+        <div class="weekCalendar">
+            <div class="day" *ngFor="let day of sched">
+                <mat-slide-toggle [checked]="day.state" color="primary" (change)="toggleChanges(day)">
+                    <span class="toggleLabel">{{day.day}}</span>
+                </mat-slide-toggle>
+                <!-- <div *ngIf="day.state" class="timeContainer">
+                    <div class="timeCounter " *ngFor="let time of day.times; let i = index;">
+                        <div class="time-picker">
+                            <div class="time">
+                                <label for="startTime{{day.day}}{{i}}">وقت البدء</label>
+                                <select id="startTime{{day.day}}{{i}}" name="startTime" [(ngModel)]="time.startTime">
+                                    <option *ngFor="let t of times" [value]="t">{{ t }}</option>
+                                </select>
+                            </div>
+                            <span class="dashes"> - - </span>
+                            <div class="time">
+                                <label for="endTime{{day.day}}{{i}}">وقت الانتهاء</label>
+                                <select id="endTime{{day.day}}{{i}}" name="endTime" [(ngModel)]="time.endTime">
+                                    <option *ngFor="let t of times" [value]="t">{{ t }}</option>
+                                </select>
+                            </div>
+                            <div class="plus" *ngIf="i === day.times.length - 1" (click)="handelPlus(day)"><span>+ </span></div>
+                            <div class="plus" *ngIf="i > 0" (click)="handelMinus(day, i)"><span> - </span></div>
+                            <div class="copy"><mat-icon>content_copy</mat-icon></div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="timeCounter" *ngFor="let time of day.times; let i = index;">
+                    <div class="time-picker">
+                      <div class="time">
+                        <label for="startTime{{day.day}}{{i}}">وقت البدء</label>
+                        <select id="startTime{{day.day}}{{i}}" name="startTime" [(ngModel)]="time.startTime">
+                            <option *ngFor="let t of times" [value]="t">{{ t }}</option>
+                        </select>
+                      </div>
+                      <span class="dashes"> - - </span>
+                      <div class="time">
+                        <label for="endTime{{day.day}}{{i}}">وقت الانتهاء</label>
+                        <select id="endTime{{day.day}}{{i}}" name="endTime" [(ngModel)]="time.endTime">
+                          <option *ngFor="let t of times" [value]="t">{{ t }}</option>
+                        </select>
+                      </div>
+                      <div class="plus" *ngIf="i === 0" (click)="handelPlus(day)"><span>+ </span></div>
+                      <div class="plus" *ngIf="i > 0" (click)="handelMinus(day, i)"><span> - </span></div>
+                      <div class="copy"><mat-icon>content_copy</mat-icon></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </form>
+</div>

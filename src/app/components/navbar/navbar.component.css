@@ -1,0 +1,117 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+    width: 90%;
+}
+
+
+.opt1 {
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.deleteBtn {
+    height: 50px;
+    width: 125px;
+    border: 1px solid red;
+    background-color: aliceblue;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.deleteIcon {
+    color: red;
+}
+
+.deleteWord {
+    color: red;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-inline-end:10px ;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+}
+
+.saveBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    height: 50px;
+    width: 125px;
+    border-radius: 10px;
+}
+
+.saveWord {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.saveBtn:hover {
+    cursor: pointer;
+}
+
+.toggleLabel {
+    display: inline-block;
+    width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.opt2 {
+    margin-top: 20px;
+    display: flex;
+    width: 17%;
+    align-items: center;
+    justify-content: space-between;
+}
+h5{
+    margin-top: 0;
+}
+
+.rightArrow {
+    background-color: rgb(231, 234, 237);
+    padding: 0.8rem;
+    border-radius: 20%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.rightArrow:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* Center vertically */
+    }
+
+    .opt1,
+    .opt2 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .opt1 {
+        justify-content: space-around;
+    }
+
+    .opt2 {
+        align-items: center;
+    }
+
+    .rightArrow {
+        padding: 0.6rem;
+    }
+}

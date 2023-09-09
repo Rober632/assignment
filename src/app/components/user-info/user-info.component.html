@@ -1,0 +1,15 @@
+<form class="userForm" #userForm="ngForm" (change)="saveUserData(userForm)">
+            <div class="avatar-container">
+                <div class="image-container"></div> 
+                <label for="avatar-input-file">
+                    <div class="icon-wrapper">
+                        <input class="imageInput" type="file" id="avatar-input-file" accept="image/*"  name="image" [(ngModel)]="userData.image"/>
+                        <mat-icon class="photoIcon">insert_photo</mat-icon>
+                    </div>
+                </label>
+            </div>
+    <div class="nameInfo">
+      <label class="nameLabel" for="userName">اسم المورد</label>
+      <input type="text" class="nameInput" id="userName" name="username" [(ngModel)]="userData.username">
+    </div>
+  </form>

@@ -1,0 +1,132 @@
+.userForm {
+    border-radius: 10px;
+    height: 20vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 44vw;
+    background-color: rgb(250, 249, 249);
+}
+
+.table-container {
+    display: table;
+    width: 100%;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.nameInfo {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    direction: rtl;
+}
+
+.nameLabel {
+    font-size: small;
+    color: #92a1ad;
+}
+
+.nameInput {
+    margin-top: 20px;
+    width: 90%;
+    padding: 25px;
+    border: 1px solid #b2a6a5;
+    border-radius: 10px;
+    background-color: #f4eeee;
+}
+
+.avatar-container {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    width: 20%;
+    justify-content: flex-end;
+}
+
+.image-container {
+    height: 120px;
+    width: 100px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+}
+
+.icon-wrapper {
+    object-fit: center;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    padding: .35rem;
+    background-color: #2962FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 25%;
+    top: 8%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.icon-wrapper:hover {
+    transition: all .25s;
+    background-color: darken(#2962FF, 15%);
+}
+
+.photoIcon {
+    color: white;
+}
+
+.icon-wrapper label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageInput {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .userForm {
+        flex-direction: column;
+        height: auto;
+        width: 80vw;
+    }
+
+    .table-container {
+        display: block;
+    }
+
+    .table-cell {
+        display: block;
+    }
+
+    .avatar-container {
+        margin-bottom: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nameInfo {
+        width: 100%;
+    }
+
+    .icon-wrapper {
+        left: auto;
+        top: auto;
+        right: 25%;
+        bottom: 8%;
+    }
+}

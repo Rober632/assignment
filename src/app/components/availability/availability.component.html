@@ -1,0 +1,42 @@
+<form class="availabilityForm" #userForm="ngForm" (change)="saveUserData(userForm)">
+    <label class="availabilityLabel">المورد متاح الي  </label>
+
+    <div class="opt1">
+        <div>
+            <input class="availabilityNumberInput" type="number" name="availabilityTime" [(ngModel)]="userData.availabilityTime">
+            <select placeholder="شهر" class='availabilityMonthInput' name="availabilityTimeDuration" [(ngModel)]="userData.availabilityTimeDuration">
+                <option name="شهر" value="">شهر</option>
+                <option name="سنه" value="سنه">سنه</option>
+                <option name="يوم" value="يوم">يوم</option>
+              </select>
+        </div>
+    </div>
+    <label class="availabilityLabel"> وقت المورد  </label>
+    <div class="opt2">
+        <div class="opt2Radio">
+            <input class="selectionRadio" type="radio" id="one" name="type" value="وقت الخدمة" name="supplierTimeService" [(ngModel)]="userData.supplierTimeService">
+            <label class="selectionLabel2" for="one"> <mat-icon>av_timer</mat-icon> وقت الخدمة   </label>
+            <input class="selectionRadio" type="radio" id="two" name="type" value="الوقت ثابت" name="supplierTimeService" [(ngModel)]="userData.supplierTimeService">
+            <label class="selectionLabel2" for="two">  <mat-icon>access_time</mat-icon> الوقت ثابت</label>
+        </div>
+        <!-- <input class="availabilityNumberInput2" style="width: 30%;" type="number" name="supplierTime" [(ngModel)]="userData.supplierTime"> -->
+        <div class="btnContainer">
+            <span class="minusBtn" (click)="handelMinus()"> - </span>
+            <input class="inputField" style="width: 100%;"  type="number" name="supplierTime" [(ngModel)]="userData.supplierTime" >
+            <span class="plusBtn" (click)="handelplus()">+</span>
+        </div>
+    </div>
+    <label class="availabilityLabel"> الحجز المتعدد</label>
+    <div class="opt3">
+        <div class="opt3Radio">
+            <input class="selectionRadio" type="radio" id="one" name="type" value="حجز واحد فقط" name="repetitiveReservationType" [(ngModel)]="userData.repetitiveReservationType">
+            <label class="selectionLabel2" for="one"><mat-icon>perm_identity</mat-icon>حجز واحد فقط   </label>
+            <input class="selectionRadio" type="radio" id="two" name="type" value=">حجز اكثر من شحص لنفس الموعد" name="repetitiveReservationType" [(ngModel)]="userData.repetitiveReservationType">
+            <label class="selectionLabel2" for="two"> <mat-icon>supervisor_account</mat-icon>حجز اكثر من شحص لنفس الموعد  </label>
+        </div>
+        <div class="inputContianer">
+            <input class="availabilityNumberInput2" style="width: 100%;" type="number" name="repetitiveReservation" [(ngModel)]="userData.repetitiveReservation">
+            <p class="inputWord">موعد</p>
+        </div>
+    </div>
+</form>

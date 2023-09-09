@@ -1,0 +1,158 @@
+.availabilityForm {
+    background-color: rgb(250, 249, 249);
+    height: 35vh;
+    width: 44vw;
+    border-radius: 10px;
+    direction: rtl;
+}
+
+.availabilityLabel {
+    color: #92a1ad;
+    font-size: small;
+    margin-inline-start: 5%;
+}
+
+.opt1,
+.opt2,
+.opt3 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.opt2,
+.opt3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.availabilityNumberInput {
+    padding: 1rem;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid rgb(224, 225, 227);
+    width: 78%;
+    background-color: rgb(247, 242, 242);
+}
+
+.availabilityNumberInput2 , .inputField{
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 225, 227);
+    background-color: rgb(247, 242, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+  .availabilityNumberInput2[type="number"] {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .availabilityNumberInput2[type="number"]::after {
+    content: "day";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+.availabilityMonthInput {
+    width: 15%;
+    padding: 1rem;
+    margin-block: 20px;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid rgb(224, 225, 227);
+    background-color: rgb(236, 241, 246);
+}
+
+.opt2Radio,
+.opt3Radio {
+    display: flex;
+    align-items: center;
+    display: inline;
+}
+
+.selectionLabel2 {
+    font-weight: 200;
+}
+
+.inputContainer{
+    position: absolute;
+}
+input:focus{
+    outline-width: 0;
+}
+.inputWord{
+    position: relative;
+    top : -57%;
+    left : -55%
+}
+
+.btnContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.minusBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 19%;
+    left: 5%;
+    z-index: 1;
+    background-color: rgb(5, 113, 222);
+    color: white;
+    height: 30px;
+    width: 25px;
+    border-radius: 10px;
+}
+.plusBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 19%;
+    right: 5%;
+    z-index: 1;
+    background-color: rgb(5, 113, 222);
+    color: white;
+    height: 30px;
+    width: 25px;
+    border-radius: 10px;
+}
+.plusBtn:hover , .minusBtn:hover{
+    cursor: pointer;
+}
+
+.inputField{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .availabilityForm {
+        width: 90vw;
+    }
+
+    .availabilityNumberInput,
+    .availabilityNumberInput2 {
+        width: 100%;
+    }
+
+    .availabilityMonthInput {
+        width: 30%;
+    }
+}

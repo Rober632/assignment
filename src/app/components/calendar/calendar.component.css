@@ -1,0 +1,128 @@
+.calendar {
+    width: 90%;
+    margin: 0 auto;
+    direction: rtl;
+    background-color: rgb(250, 249, 249);
+    border-radius: 10px;
+  }
+  
+  p {
+    margin-right: 50px;
+  }
+  
+  .calendarTitle2 {
+    font-size: small;
+    color: #92a1ad;
+  }
+  
+  .calendarTitle {
+    padding-top: 40px;
+  }
+  
+  .weekCalendar {
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+  
+  .day {
+    margin-block-start: 40px;
+  }
+  
+  .toggleLabel {
+    margin-inline-start: 20px;
+  }
+  
+  .time-picker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-inline-start: 15%;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-block-end: 15px;
+    color: #92a1ad;
+    margin-inline-start: 30px;
+    font-size: small;
+  }
+  
+  select {
+    padding: 15px;
+    font-size: 14px;
+    margin-inline: 5%;
+  }
+  
+  .time {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+  }
+  
+  .timeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashes {
+    margin-block-start: 20px;
+    width: 20px;
+  }
+  
+  .plus {
+    margin-block-start: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 243, 244);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: rgb(146, 161, 173);
+    font-size: larger;
+  }
+  
+  .plus:hover {
+    cursor: pointer;
+  }
+  
+  .copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    background-color: rgb(227, 237, 248);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-inline: 30px;
+    margin-block-start: 20px;
+  }
+  
+  .copy:hover {
+    cursor: pointer;
+  }
+  
+  .timeCounter {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Responsive CSS */
+  
+  @media screen and (max-width: 600px) {
+    .weekCalendar {
+      margin-right: 10px;
+    }
+  
+    .time-picker {
+      margin-inline-start: 5%;
+    }
+  
+    .time {
+      width: auto;
+    }
+  }
