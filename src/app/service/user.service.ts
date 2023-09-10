@@ -1,24 +1,23 @@
 import { Injectable } from '@angular/core';
+import { UserData } from '../interfaces/user-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private userData: any = null;
-
-  constructor() {
-    this.userData = { username  : '',
+  private userData: UserData = {  username  : '',
   image : '' ,
   type : '' ,
-  availabilityTime : '',
+  availabilityTime : 0,
   availabilityTimeDuration : '',
   supplierTimeService : '',
-  supplierTime : '' , 
-  repetitiveReservation : '' ,
-  repetitiveReservationType : ''
+  supplierTime : 0 , 
+  repetitiveReservation : 0 ,
+  repetitiveReservationType : '',
+  calendar : ''
+  };
 
-};
-  }
+  constructor() {}
 
   setUsername(username: string) {
     this.userData.username = username;
@@ -54,6 +53,9 @@ export class UserService {
     console.log(this.userData);
     
   }
+  saveUserData(){
+    alert(JSON.stringify(this.userData))
+  }
 
   getUserData() {
     return this.userData;
@@ -65,11 +67,11 @@ export class UserService {
     this.userData = { username  : '',
     image : '' ,
     type : '' ,
-    availabilityTime : '',
+    availabilityTime : 0,
     availabilityTimeDuration : '',
     supplierTimeService : '',
-    supplierTime : '' , 
-    repetitiveReservation : '' ,
+    supplierTime : 0 , 
+    repetitiveReservation : 0 ,
     repetitiveReservationType : '' ,
     calendar : ''
   };

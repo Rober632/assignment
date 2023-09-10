@@ -20,4 +20,7 @@ export class NavbarComponent {
   handelRemove(){
     this.userService.clearUserData()
   }
+  handelSave(){
+    this.userService.saveUserData()
+  }
 }
