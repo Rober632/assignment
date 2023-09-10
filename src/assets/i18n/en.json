@@ -1,0 +1,45 @@
+{
+  "navbar" : {
+      "add": "Add new resources",
+      "save" : "Save Changes" ,
+      "delete" : "Remove supplier" ,
+      "مغعلة" : "Activated" ,
+      "غير مغعلة" : "Unactivated"
+  } , 
+  "user" : {
+    "name":"supplier Name"
+  } , 
+  "type" : {
+    "label" :"Select resource type" ,
+    "duringTheDay" : "Book during the day" ,
+    "period" : "Booking for a period (more than a day)"
+  } , 
+  "availability" : {
+    "label" : "Resource Available To" ,
+    "time" : "Vendor Time" ,
+    "service" : "Service Time" ,
+    "fixed" : "Fixed Time",
+    "reservation" : "Multiple reservations" , 
+    "one" : "One booking only" ,
+    "more" : "Book more than one person for the same appointment" ,
+    "month" : "Month" , 
+    "year" : "Year" ,
+    "day" : "Day" ,
+    "appointment" : "appointment"
+  } , 
+  "calendar" : {
+    "workTime" : "Set Work Times For The Vendor" ,
+    "settings" : "Configure your week settings here. Simply move the sliders and add/remove rest times for the working hours.",
+    "start" : "Start Time" ,
+    "end" : "End Time" ,
+    "week" : {
+      "الجمعة" :"Friday" ,
+      "السبت" :"Saturday" ,
+      "الاحد" :"Sunday" ,
+      "الاثنين" :"Monday" ,
+      "الثلاثاء" :"Tuesday" ,
+      "الاربعاء" :"Wednesday" ,
+      "الخميس" :"Thursday" 
+    }
+  }
+}

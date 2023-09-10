@@ -1,7 +1,7 @@
 <form class="selectionForm" #userForm="ngForm" (change)="saveUserData(userForm)">
-    <label class="selectionLabel">اختر نوع المورد</label>
+    <label class="selectionLabel"> {{ "type.label" | translate }} </label>
     <input class="selectionRadio" type="radio" id="one" name="type1" value="حجز خلال اليوم "  [(ngModel)]="userData.type">
-    <label class="selectionLabel2" for="one">حجز خلال اليوم  </label><br>
+    <label class="selectionLabel2" for="one"> {{ "type.duringTheDay" | translate }}  </label> <br>
     <input class="selectionRadio" type="radio" id="two" name="type2" value="حجز مدة" [(ngModel)]="userData.type">
-    <label class="selectionLabel2" for="two">حجز مدة ( اكثر من يوم )  </label><br>  
+    <label class="selectionLabel2" for="two"> {{ "type.period" | translate }} </label><br>  
 </form>

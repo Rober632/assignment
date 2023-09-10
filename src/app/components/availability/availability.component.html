@@ -1,42 +1,41 @@
 <form class="availabilityForm" #userForm="ngForm" (change)="saveUserData(userForm)">
-    <label class="availabilityLabel">المورد متاح الي  </label>
+    <label class="availabilityLabel">  {{ "availability.label" | translate }} </label>
 
     <div class="opt1">
         <div>
             <input class="availabilityNumberInput" type="number" name="availabilityTime" [(ngModel)]="userData.availabilityTime">
             <select placeholder="شهر" class='availabilityMonthInput' name="availabilityTimeDuration" [(ngModel)]="userData.availabilityTimeDuration">
-                <option name="شهر" value="">شهر</option>
-                <option name="سنه" value="سنه">سنه</option>
-                <option name="يوم" value="يوم">يوم</option>
+                <option name="يوم" value="يوم">{{ "availability.day" | translate}}</option>
+                <option name="شهر"  value="شهر"> {{ "availability.month" | translate}}</option>
+                <option name="سنه" value="سنه">{{ "availability.year" | translate}}</option>
               </select>
         </div>
     </div>
-    <label class="availabilityLabel"> وقت المورد  </label>
+    <label class="availabilityLabel">  {{ "availability.time" | translate }}  </label>
     <div class="opt2">
         <div class="opt2Radio">
             <input class="selectionRadio" type="radio" id="one" name="type" value="وقت الخدمة" name="supplierTimeService" [(ngModel)]="userData.supplierTimeService">
-            <label class="selectionLabel2" for="one"> <mat-icon>av_timer</mat-icon> وقت الخدمة   </label>
+            <label class="selectionLabel2" for="one"> <mat-icon>av_timer</mat-icon> {{ "availability.service" | translate }}    </label>
             <input class="selectionRadio" type="radio" id="two" name="type" value="الوقت ثابت" name="supplierTimeService" [(ngModel)]="userData.supplierTimeService">
-            <label class="selectionLabel2" for="two">  <mat-icon>access_time</mat-icon> الوقت ثابت</label>
+            <label class="selectionLabel2" for="two">  <mat-icon>access_time</mat-icon>  {{ "availability.fixed" | translate }}</label>
         </div>
-        <!-- <input class="availabilityNumberInput2" style="width: 30%;" type="number" name="supplierTime" [(ngModel)]="userData.supplierTime"> -->
         <div class="btnContainer">
             <span class="minusBtn" (click)="handelMinus()"> - </span>
             <input class="inputField" style="width: 100%;"  type="number" name="supplierTime" [(ngModel)]="userData.supplierTime" >
             <span class="plusBtn" (click)="handelplus()">+</span>
         </div>
     </div>
-    <label class="availabilityLabel"> الحجز المتعدد</label>
+    <label class="availabilityLabel"> {{ "availability.reservation" | translate}}</label>
     <div class="opt3">
         <div class="opt3Radio">
             <input class="selectionRadio" type="radio" id="one" name="type" value="حجز واحد فقط" name="repetitiveReservationType" [(ngModel)]="userData.repetitiveReservationType">
-            <label class="selectionLabel2" for="one"><mat-icon>perm_identity</mat-icon>حجز واحد فقط   </label>
+            <label class="selectionLabel2" for="one"><mat-icon>perm_identity</mat-icon> {{ "availability.one" | translate }}   </label>
             <input class="selectionRadio" type="radio" id="two" name="type" value=">حجز اكثر من شحص لنفس الموعد" name="repetitiveReservationType" [(ngModel)]="userData.repetitiveReservationType">
-            <label class="selectionLabel2" for="two"> <mat-icon>supervisor_account</mat-icon>حجز اكثر من شحص لنفس الموعد  </label>
+            <label class="selectionLabel2" for="two"> <mat-icon>supervisor_account</mat-icon> {{ "availability.more" | translate }}</label>
         </div>
         <div class="inputContianer">
             <input class="availabilityNumberInput2" style="width: 100%;" type="number" name="repetitiveReservation" [(ngModel)]="userData.repetitiveReservation">
-            <p class="inputWord">موعد</p>
+            <p class="inputWord">{{ "availability.appointment" | translate }}</p>
         </div>
     </div>
 </form>

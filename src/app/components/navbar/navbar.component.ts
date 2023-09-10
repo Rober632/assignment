@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { UserService } from 'src/app/service/user.service';
-
+import { TranslateService } from '@ngx-translate/core';
+import { LangService } from 'src/app/service/lang.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,11 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private userService : UserService){}
+
+  constructor(private userService : UserService , private translate : LangService){    
+
+}
+
   isSlideChecked : boolean = true
   slideName = 'مغعلة'
   title = 'task';

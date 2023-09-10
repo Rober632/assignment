@@ -98,7 +98,8 @@ input:focus{
 .inputWord{
     position: relative;
     top : -57%;
-    left : -55%
+    left : -55% ;
+    font-size: 1rem;
 }
 
 .btnContainer{

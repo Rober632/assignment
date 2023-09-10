@@ -12,7 +12,14 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http,
+    './assets/i18n/',
+    '.json');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,12 +36,20 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatSlideToggleModule,
     MatInputModule,
-    FormsModule
-
-    
+    FormsModule ,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
-
+  exports: [TranslateModule],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class NgxTranslateModule { }
