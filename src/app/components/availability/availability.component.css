@@ -6,10 +6,19 @@
     direction: rtl;
 }
 
-.availabilityLabel {
+.availabilityLabel  , .availabilityLabelHead{
     color: #92a1ad;
     font-size: small;
     margin-inline-start: 5%;
+    display:inline-block;
+  
+}
+.availabilityLabel{
+    margin-bottom: 5px;
+}
+
+.availabilityLabelHead{
+    margin-top: 20px;
 }
 
 .opt1,
@@ -55,20 +64,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
   .availabilityNumberInput2[type="number"] {
-    text-align: center;
     width: 50px;
     height: 50px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    padding-right: 30px;
   }
-  .availabilityNumberInput2[type="number"]::after {
-    content: "day";
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
-  
 .availabilityMonthInput {
     width: 15%;
     padding: 1rem;
@@ -77,28 +78,25 @@ input[type="number"]::-webkit-inner-spin-button {
     border: 2px solid rgb(224, 225, 227);
     background-color: rgb(236, 241, 246);
 }
-
-.opt2Radio,
-.opt3Radio {
-    display: flex;
-    align-items: center;
-    display: inline;
+.selectionRadio{
+    margin-inline-start: 30px;
 }
-
+.optIcon{
+    font-size: 25px;
+    margin-inline: 5px;
+}
 .selectionLabel2 {
     font-weight: 200;
+    font-size: 12px;
 }
 
-.inputContainer{
-    position: absolute;
-}
 input:focus{
     outline-width: 0;
 }
 .inputWord{
     position: relative;
     top : -57%;
-    left : -55% ;
+    right : 20% ;
     font-size: 1rem;
 }
 
@@ -141,6 +139,13 @@ input:focus{
 
 .inputField{
     text-align: center;
+
+}
+.inputField[type="number"]::-webkit-inner-spin-button,
+.inputField[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

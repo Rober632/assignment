@@ -1,7 +1,7 @@
  <div class="calendar">
     <p class="calendarTitle"> {{ "calendar.workTime" | translate }} </p>
     <p class="calendarTitle2"> {{ "calendar.settings" | translate }} </p>
-    <form #userForm="ngForm" (change)="saveUserData(userForm)">
+    <form #userForm="ngForm" class="calendarForm" (change)="saveUserData(userForm)">
         <div class="weekCalendar">
             <div class="day" *ngFor="let day of sched">
                 <mat-slide-toggle [checked]="day.state" color="primary" (change)="toggleChanges(day)">

@@ -14,7 +14,9 @@
     font-size: small;
     color: #92a1ad;
   }
-  
+  .calendarForm{
+    padding-bottom: 40px;
+  }
   .calendarTitle {
     padding-top: 40px;
   }

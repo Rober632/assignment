@@ -20,7 +20,8 @@ export class NavbarComponent {
   title = 'task';
   toggleChanges($event: MatSlideToggleModule) {
     this.isSlideChecked = !this.isSlideChecked
-    this.isSlideChecked ? this.slideName = 'مغعلة' : this.slideName = 'غير مغعلة'
+    this.isSlideChecked ?  this.slideName = 'مغعلة'  : this.slideName = 'غير مغعلة'
+    this.isSlideChecked ? this.translate.setLanguage('ar') : this.translate.setLanguage('en')
   }
   handelRemove(){
     this.userService.clearUserData()

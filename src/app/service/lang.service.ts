@@ -9,6 +9,10 @@ export class LangService {
   constructor( private translate : TranslateService) {
     translate.addLangs(['en', 'ar']);
     translate.setDefaultLang('ar');
-    translate.use('en');
-   }
+    translate.use('ar');
+  }
+  setLanguage(lang : any ){
+    this.translate.use(lang);
+  }
 }
+

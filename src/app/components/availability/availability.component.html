@@ -1,5 +1,5 @@
 <form class="availabilityForm" #userForm="ngForm" (change)="saveUserData(userForm)">
-    <label class="availabilityLabel">  {{ "availability.label" | translate }} </label>
+    <label class="availabilityLabelHead">  {{ "availability.label" | translate }} </label>
 
     <div class="opt1">
         <div>
@@ -14,12 +14,12 @@
     <label class="availabilityLabel">  {{ "availability.time" | translate }}  </label>
     <div class="opt2">
         <div class="opt2Radio">
-            <input class="selectionRadio" type="radio" id="one" name="type" value="وقت الخدمة" name="supplierTimeService" [(ngModel)]="userData.supplierTimeService">
-            <label class="selectionLabel2" for="one"> <mat-icon>av_timer</mat-icon> {{ "availability.service" | translate }}    </label>
+            <input  type="radio" id="one" name="type" value="وقت الخدمة" name="supplierTimeService" [(ngModel)]="userData.supplierTimeService">
+            <label class="selectionLabel2" for="one"> <mat-icon class="optIcon">av_timer</mat-icon> {{ "availability.service" | translate }}    </label>
             <input class="selectionRadio" type="radio" id="two" name="type" value="الوقت ثابت" name="supplierTimeService" [(ngModel)]="userData.supplierTimeService">
-            <label class="selectionLabel2" for="two">  <mat-icon>access_time</mat-icon>  {{ "availability.fixed" | translate }}</label>
+            <label class="selectionLabel2" for="two">  <mat-icon class="optIcon">access_time</mat-icon>  {{ "availability.fixed" | translate }}</label>
         </div>
-        <div class="btnContainer">
+        <div class="btnContainer" style="width: 40%;">
             <span class="minusBtn" (click)="handelMinus()"> - </span>
             <input class="inputField" style="width: 100%;"  type="number" name="supplierTime" [(ngModel)]="userData.supplierTime" >
             <span class="plusBtn" (click)="handelplus()">+</span>
@@ -28,12 +28,12 @@
     <label class="availabilityLabel"> {{ "availability.reservation" | translate}}</label>
     <div class="opt3">
         <div class="opt3Radio">
-            <input class="selectionRadio" type="radio" id="one" name="type" value="حجز واحد فقط" name="repetitiveReservationType" [(ngModel)]="userData.repetitiveReservationType">
-            <label class="selectionLabel2" for="one"><mat-icon>perm_identity</mat-icon> {{ "availability.one" | translate }}   </label>
+            <input type="radio" id="one" name="type" value="حجز واحد فقط" name="repetitiveReservationType" [(ngModel)]="userData.repetitiveReservationType">
+            <label class="selectionLabel2" for="one"><mat-icon class="optIcon">perm_identity</mat-icon> {{ "availability.one" | translate }}   </label>
             <input class="selectionRadio" type="radio" id="two" name="type" value=">حجز اكثر من شحص لنفس الموعد" name="repetitiveReservationType" [(ngModel)]="userData.repetitiveReservationType">
-            <label class="selectionLabel2" for="two"> <mat-icon>supervisor_account</mat-icon> {{ "availability.more" | translate }}</label>
+            <label class="selectionLabel2" for="two"> <mat-icon class="optIcon">supervisor_account</mat-icon> {{ "availability.more" | translate }}</label>
         </div>
-        <div class="inputContianer">
+        <div class="inputContianer" style="width: 40%;">
             <input class="availabilityNumberInput2" style="width: 100%;" type="number" name="repetitiveReservation" [(ngModel)]="userData.repetitiveReservation">
             <p class="inputWord">{{ "availability.appointment" | translate }}</p>
         </div>
